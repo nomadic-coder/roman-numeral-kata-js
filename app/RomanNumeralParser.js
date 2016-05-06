@@ -42,7 +42,7 @@ var RomanNumeralParser = function() {
         return romanNumerals.
             sort(function(lhs, rhs) { return rhs.arabic - lhs.arabic; }).
             filter(function(romanNumeral) { return Math.floor(arabic/romanNumeral.arabic) > 0; })[0];
-    }
+    };
     
     RomanNumeralParser.prototype.validateArabic = function(arabic) {
         if (arabic < 1) {
@@ -52,5 +52,5 @@ var RomanNumeralParser = function() {
         if (arabic > 3000) {
             throw new RangeError("Number should be less than 3001");
         }
-    }
+    };
 };
