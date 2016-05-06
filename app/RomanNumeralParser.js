@@ -28,7 +28,7 @@ var RomanNumeralParser = function() {
         
         var parsedNumeral = "";
         
-        var nextNumeral = RomanNumeralParser.prototype.getNextNumeral(arabic);
+        var nextNumeral = RomanNumeralParser.prototype.getBiggestDenominator(arabic);
         parsedNumeral += nextNumeral.numeral;
         var remainder = arabic - nextNumeral.arabic;
         if (remainder > 0) {
@@ -38,10 +38,10 @@ var RomanNumeralParser = function() {
         return parsedNumeral;
     };
     
-    RomanNumeralParser.prototype.getNextNumeral = function(arabic) {
+    RomanNumeralParser.prototype.getBiggestDenominator = function(arabic) {
         return romanNumerals.
             sort(function(lhs, rhs) { return rhs.arabic - lhs.arabic; }).
-            filter(function(romanNumeral) { return arabic >= romanNumeral.arabic; })[0];
+            filter(function(romanNumeral) { return Math.floor(arabic/romanNumeral.arabic) > 0; })[0];
     }
     
     RomanNumeralParser.prototype.validateArabic = function(arabic) {
