@@ -1,8 +1,7 @@
 "use strict";
 
-var parseAndCheckResult = function(parseArabicNumber, expectedResult) {
-    var romanNumeralParser = new RomanNumeralParser();
-    var romanNumeral = romanNumeralParser.parse(parseArabicNumber);
+var parseAndCheckResult = function(arabic, expectedResult) {
+    var romanNumeral = RomanNumeralsModule.parse(arabic);
     return function () {
         expect(romanNumeral).toEqual(expectedResult);
     }
@@ -10,16 +9,12 @@ var parseAndCheckResult = function(parseArabicNumber, expectedResult) {
 
 describe("Should reject arabic numbers outside acceptable range: ", function() {
     it("should reject numbers less than 1", function() {
-        var romanNumeralParser = new RomanNumeralParser();
-        
-        expect(function() { romanNumeralParser.parse(0); }).
+        expect(function() { RomanNumeralsModule.parse(0); }).
             toThrow(new RangeError("Number should be greater than 0"));
     });
-    
+   
     it("should reject numbers greater than 3000", function() {
-        var romanNumeralParser = new RomanNumeralParser();
-        
-        expect(function () { romanNumeralParser.parse(3001);}).
+        expect(function () { RomanNumeralsModule.parse(3001);}).
             toThrow(new RangeError("Number should be less than 3001"));
     });
 });
