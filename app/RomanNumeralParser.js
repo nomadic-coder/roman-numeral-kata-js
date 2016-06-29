@@ -26,8 +26,6 @@ var romanNumerals = [
 ];
 
 var RomanNumeralParser = function() {
-    var calls = 0;
-   
     RomanNumeralParser.prototype.parse = function(arabic) {
         RomanNumeralParser.prototype.validateArabic(arabic);
        
@@ -39,7 +37,7 @@ var RomanNumeralParser = function() {
         if (remainder > 0) {
             parsedNumeral += RomanNumeralParser.prototype.parse(remainder);
         }
-        calls++;
+        
         return parsedNumeral;
     };
    
