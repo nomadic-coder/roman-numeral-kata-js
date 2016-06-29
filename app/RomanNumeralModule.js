@@ -1,4 +1,4 @@
-var RomanNumeralsModule = (function() {
+var RomanNumeralModule = (function() {
     "use strict";
     
     var RomanNumeral = function(arabic, numeral) {

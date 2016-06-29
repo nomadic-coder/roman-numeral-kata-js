@@ -1,7 +1,12 @@
+/*
+ Uses alternative implementation using constructor function pattern
+ */
+
 "use strict";
 
 var parseAndCheckResult = function(arabic, expectedResult) {
-    var romanNumeral = RomanNumeralModule.parse(arabic);
+    var parser = new RomanNumeralParser();
+    var romanNumeral = parser.parse(arabic);
     
     return function () {
         expect(romanNumeral).toEqual(expectedResult);
@@ -10,12 +15,14 @@ var parseAndCheckResult = function(arabic, expectedResult) {
 
 describe("Should reject arabic numbers outside acceptable range: ", function() {
     it("should reject numbers less than 1", function() {
-        expect(function() { RomanNumeralModule.parse(0); }).
+        var parser = new RomanNumeralParser();
+        expect(function() { parser.parse(0); }).
             toThrow(new RangeError("Number should be greater than 0"));
     });
   
     it("should reject numbers greater than 3000", function() {
-        expect(function () { RomanNumeralModule.parse(3001);}).
+        var parser = new RomanNumeralParser();
+        expect(function () { parser.parse(3001);}).
             toThrow(new RangeError("Number should be less than 3001"));
     });
 });
