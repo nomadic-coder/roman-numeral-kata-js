@@ -24,8 +24,8 @@ var RomanNumeralModule = (function() {
     
     var getBiggestDenominator = function(arabic) {
         return romanNumerals.
-        sort(function(lhs, rhs) { return rhs.arabic - lhs.arabic; }).
-        filter(function(romanNumeral) { return Math.floor(arabic/romanNumeral.arabic) > 0; })[0];
+            sort(function(lhs, rhs) { return rhs.arabic - lhs.arabic; }).
+                filter(function(romanNumeral) { return Math.floor(arabic/romanNumeral.arabic) > 0; })[0];
     };
 
     var validateArabic = function(arabic) {
