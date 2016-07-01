@@ -1,0 +1,22 @@
+{
+  "name": "roman-numerals-kata",
+  "version": "1.0.0",
+  "description": "See : http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadic-coder/roman-numeral-kata-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomadic-coder/roman-numeral-kata-js/issues"
+  },
+  "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme"
+}
