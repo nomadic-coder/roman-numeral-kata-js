@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/nomadic-coder/roman-numeral-kata-js/issues"
   },
-  "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme"
+  "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme",
+  "devDependencies": {
+    "karma": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1"
+  }
 }
