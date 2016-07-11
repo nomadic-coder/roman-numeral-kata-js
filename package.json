@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme",
   "devDependencies": {
+    "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.1"
