@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "gulp log",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,8 @@
   },
   "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-npm-install": "^0.3.0",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.4",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
     "karma-jasmine": "^1.0.2",
