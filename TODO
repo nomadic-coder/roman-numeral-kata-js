@@ -1,0 +1,4 @@
+need a Grunt file to:
+1. npm install -g karma-cli ???
+2. npm install
+3. run karma tests

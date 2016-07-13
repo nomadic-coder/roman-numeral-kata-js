@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme",
   "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-npm-install": "^0.3.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
     "karma-jasmine": "^1.0.2",

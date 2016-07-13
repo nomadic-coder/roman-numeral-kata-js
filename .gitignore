@@ -3,6 +3,7 @@
 *.iml
 *.iws
 node_modules/
+build/
 
 
 
