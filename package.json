@@ -22,6 +22,7 @@
   "homepage": "https://github.com/nomadic-coder/roman-numeral-kata-js#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-uglify": "^1.5.4",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
